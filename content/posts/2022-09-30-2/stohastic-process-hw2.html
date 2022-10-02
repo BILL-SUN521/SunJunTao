@@ -1,0 +1,213 @@
+---
+title: 随机过程作业2
+author: JunTao Sun
+date: '2022-09-30'
+slug: []
+categories:
+  - 随机过程
+tags:
+  - 作业
+draft: yes
+description: ~
+featured_image: ~
+---
+
+
+
+<div id="section" class="section level1">
+<h1>1:</h1>
+<div id="section-1" class="section level2">
+<h2>(1):</h2>
+<p>由题意可以得到泊松过程的强度为<span class="math inline">\(\lambda\)</span>=3</p>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+P(N(12)-N(8)=0)&amp;=e^{-\lambda t}\frac{(\lambda t)^{0}}{0!} \\
+&amp;=e^{-3\cdot(12-8)} \\
+&amp;=e^{-12} \\
+\end{split}\end{equation}\]</span></p>
+<p>所以在上午8点到12点期间，该天文台没有观察到流星的概率为<span class="math inline">\(e^{-12}\)</span>,即为：6.1442124^{-6}</p>
+</div>
+<div id="section-2" class="section level2">
+<h2>(2):</h2>
+<p>记X为观测到第一颗流星的时间，那么由定理2.1，我们有：X服从参数为3的指数分布</p>
+<p>由此可以得到天文台观察到第一颗流星的时间的分布函数为： <span class="math display">\[F(x)=\begin{cases}
+1-e^{-3x},x&gt;0 \\
+0  \quad \quad \quad ,else
+\end{cases}\]</span></p>
+</div>
+</div>
+<div id="section-3" class="section level1">
+<h1>2:</h1>
+<div id="section-4" class="section level2">
+<h2>(1):</h2>
+<p>由题意可以得到泊松过程的强度为<span class="math inline">\(\lambda\)</span>=4</p>
+<p>由定理2.1，T服从一个参数为4的指数分布</p>
+<p>𝑇的概率密度函数；
+<span class="math display">\[f(t)=\begin{cases}
+4e^{-4t},t&gt;0 \\
+0 \quad \quad ,else
+\end{cases}\]</span></p>
+</div>
+<div id="section-5" class="section level2">
+<h2>(2):</h2>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+P(T \ge 1)&amp;=\int_{1}^{+\infty} 4e^{-4t}dt \\
+&amp;=e^{-4 \cdot 1} \\
+&amp;=e^{-4}
+\end{split}\end{equation}\]</span></p>
+<p>所以<span class="math inline">\(P(T \ge 1)=e^{-4}\)</span>,即为：0.0183156</p>
+</div>
+</div>
+<div id="section-6" class="section level1">
+<h1>3：</h1>
+<div id="section-7" class="section level2">
+<h2>(1):</h2>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+P(N(2)-N(0)=3)&amp;=\frac{[\lambda \cdot (2-0)]^3}{3!}e^{-\lambda\cdot(2-0)} \\
+&amp;=\frac{4\lambda^4}{3}e^{-2\lambda}
+\end{split}\end{equation}\]</span></p>
+</div>
+<div id="section-8" class="section level2">
+<h2>(2):</h2>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+P(N(2)-N(1) \ge 3)&amp;=1-P(N(2)-N(1)=0)-P(N(2)-N(1)=1)-P(N(2)-N(1)=2)\\
+&amp;=1-\frac{[\lambda \cdot (2-1)]^0}{0!}e^{-\lambda\cdot(2-1)}-\frac{[\lambda \cdot (2-1)]^1}{1!}e^{-\lambda\cdot(2-1)}-\frac{[\lambda \cdot (2-1)]^2}{2!}e^{-\lambda\cdot(2-1)} \\
+&amp;=1-(1+\lambda+\frac{\lambda^2}{2})e^{-\lambda}
+\end{split}\end{equation}\]</span></p>
+</div>
+</div>
+<div id="section-9" class="section level1">
+<h1>4：</h1>
+<p>证明:</p>
+<p>记<span class="math inline">\(P_k(t)\)</span>为<span class="math inline">\(P(N(t)=k)\)</span>。先考虑在一个时刻间没有发生事件的概率,根据定义:</p>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+\frac{P(N(t+h)=0)-P(N(t)=0)}{h}&amp;=\frac{P(N(t+h)-N(t)=0)\cdot P(N(t)=0)-P(N(t)=0)}{h} \\
+&amp;=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P(N(t)=0)-P(N(t)=0)}{h} \\
+&amp;=\frac{(-\lambda(t)\cdot h-2o(h))P_0(t)}{h} \\
+&amp;=\frac{o(h)}{h}P_0(t)-\lambda(t)P_0(t)
+\end{split}\end{equation}
+\]</span></p>
+<p>当<span class="math inline">\(h \to 0\)</span>时，</p>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+\lim_{h \to 0} \frac{P(N(t+h)=0)-P(N(t)=0)}{h}&amp;=\lim_{h \to 0}\frac{o(h)}{h}P_0(t)-\lambda(t)P_0(t) \\
+&amp;=-\lambda(t)P_0(t)
+\end{split}\end{equation}
+\]</span>
+即:<span class="math inline">\(P&#39;_0(t)=-\lambda(t)P_0(t)\)</span></p>
+<p>通过求解常微分方程，我们有:
+<span class="math inline">\(P_0(t)=e^{-\int_0^t\lambda(s)ds}=e^{-m(t)}\)</span></p>
+<p>接着我们假设<span class="math inline">\(P(N(t)=n)=P_n(t)=e^{-m(t)}\frac{(m(t))^n}{n!}\)</span>,那么：</p>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+\frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&amp;=\frac{P(N(t+h)-N(t)=0)\cdot P_{n+1}(t)+P(N(t+h)-N(t)=1)\cdot P_{n}(t)\\
++P(N(t+h)-N(t) \ge 2)\cdot P(N(t)&lt;n)-P_{n+1}(t)}{h} \\
+&amp;=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P_{n+1}(t)+(\lambda(t)\cdot h+o(h))\cdot P_{n}(t)+ \\
+o(h)\cdot P(N(t)&lt;n)-P_{n+1}(t)}{h} \\
+&amp;=\frac{(-\lambda(t)\cdot h-2o(h))P_{n+1}(t)+(\lambda(t)\cdot h+o(h))e^{-m(t)}\frac{(m(t))^n}{n!}+\\o(h)\cdot P(N(t)&lt;n)}{h} \\
+&amp;=\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!}+P(N(t)&lt;n]- \\ &amp;\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
+\end{split}\end{equation}
+\]</span></p>
+<p>当<span class="math inline">\(h \to 0\)</span>时，</p>
+<p><span class="math display">\[
+\begin{equation}\begin{split}
+\lim_{h \to 0} \frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&amp;=\lim_{h \to 0}\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!}+P(N(t)&lt;n]- \\ &amp;\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}] \\
+&amp;=-\lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
+\end{split}\end{equation}
+\]</span></p>
+<p>即：<span class="math inline">\(P&#39;_{n+1}(t)=-\lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]\)</span></p>
+<p>通过求解常微分方程，我们有:
+<span class="math inline">\(P_{n+1}(t)=e^{-m(t)}\frac{(m(t))^{n+1}}{(n+1)!}\)</span></p>
+<p>综上所述，通过数学归纳法，我们可以得到:
+<span class="math inline">\(P(N(t)-N(0)=n)=e^{-m(t)}\frac{(m(t))^{n}}{n!}\)</span>,n=0,1,2,…</p>
+<p>再由<span class="math inline">\({N(t), t \ge0}\)</span>有独立增量，我们可以得到:</p>
+<p><span class="math display">\[\begin{equation}\begin{split}
+P\{N(t+s)-N(t)=n\}&amp;=e^{-[\int_{t}^{t+s}\lambda(u)du]}\frac{[\int_{t}^{t+s}\lambda(u)du]^{n}}{n!} \\
+&amp;=e^{-[m(t+s)-m(t)]}\frac{[m(t+s)-m(t)]^{n}}{n!},n=0,1,2,...
+\end{split}\end{equation}\]</span></p>
+<p>其中<span class="math inline">\(m(t)=\int_{0}^{t}\lambda(s)ds\)</span></p>
+<p>得证</p>
+</div>
+<div id="section-10" class="section level1">
+<h1>5：</h1>
+<p>有题意得：自8时开始计算，某商店在t时到达顾客的累计人数是一个非齐次的泊松过程。在8-11时时，泊松过程强度<span class="math inline">\(\lambda(t)\)</span>=5+5t;在11-13时时，强度<span class="math inline">\(\lambda(t)\)</span>为20;在13-17时时，强度<span class="math inline">\(\lambda(t)=30-2t\)</span>。</p>
+<p>即:<span class="math display">\[\lambda(t)=\begin{cases}
+5+5t,0\le t &lt; 3 \\
+20  \quad \quad ,3\le t &lt; 5 \\
+30-2t,5\le t &lt; 9
+\end{cases}\]</span></p>
+<p>N(1.5)-N(0.5)服从参数为<span class="math inline">\(m(1,5)-m(0.5)=\int_{0}^{1.5}(5+5s)ds-\int_{0}^{0.5}(5+5s)ds=10\)</span>的泊松分布</p>
+<p>在8:30-9:30间无顾客到达商店的概率是
+<span class="math inline">\(P(N(1.5)-N(0.5)=0)=e^{-[m(1.5)-m(0.5)]}\frac{[m(1.5)-m(0.5)]^0}{0!}=e^{-10}\)</span>,即为：4.539993^{-5}</p>
+<p>在这段时间内,到达商店的顾客数学期望即为泊松分布的均值10。</p>
+</div>
+<div id="section-11" class="section level1">
+<h1>6:</h1>
+<div id="section-12" class="section level2">
+<h2>(1):</h2>
+<p><span class="math inline">\(m(1)=\int_{0}^{1}\frac{1}{1+t^2}dt=arctant|_0^1=\frac{\pi}{4}\)</span></p>
+<p>因此根据题意，N(1)的概率分布服从一个参数为<span class="math inline">\(\frac{\pi}{4}\)</span>的泊松分布，即：
+<span class="math inline">\(P(N(1)=n)=e^{-\frac{\pi}{4}}\frac{\pi^n}{4^nn!}\)</span>n=0,1,2…</p>
+</div>
+<div id="section-13" class="section level2">
+<h2>(2):</h2>
+<p><span class="math inline">\(m(4)-m(2)=\int_{2}^{4}\frac{1}{1+t^2}dt=arctant|_2^4=arctan4-arctan2\)</span></p>
+<p>所以N(4)-N(2)的概率分布是一个服从参数为arctan4-arctan2的泊松分布，即：
+<span class="math inline">\(P(N(4)-N(2)=n)=e^{arctan4-arctan2}\frac{(arctan4-arctan2)^{n}}{n!}\)</span>,n=0,1,2…</p>
+</div>
+<div id="section-14" class="section level2">
+<h2>(3):</h2>
+<p><span class="math inline">\(m(t)=\int_{0}^{t}\frac{1}{1+t^2}dt=arctant|_0^t=arctant\)</span></p>
+<p>N(1)的概率分布服从一个参数为arctan(t)的泊松分布，其均值函数为:E(t)=arctan(t),方差函数为:Var(t)=arctan(t)。</p>
+</div>
+</div>
+<div id="section-15" class="section level1">
+<h1>7:</h1>
+<p>证明：</p>
+<p>对强度为λ的泊松过程事件发生的次数，这些事件在时刻t以概率<span class="math inline">\(\frac{λ(t)}{λ}\)</span>被记录。由于λ(t)有界且连续，因此<span class="math inline">\(\int_{s}^{t}\lambda\)</span>对任意<span class="math inline">\(t \ge 0, s \ge 0\)</span>可积。</p>
+<p>此时由于定理2.4，对任意<span class="math inline">\(t \ge 0, s \ge 0,\)</span>N(t)-N(s)服从均值为<span class="math inline">\(\lambda tp=\lambda t \int_{s}^{t}\frac{1}{t}\frac{\lambda(s)}{\lambda}ds=\int_{s}^{t}\lambda (s)ds\)</span>的泊松分布</p>
+<p>同时，又由于N(0)=0;<span class="math inline">\(\{N(t),t\ge 0 \}\)</span>具有独立增量。因此由定义是一个强度函数为<span class="math inline">\(\lambda(t)\)</span>的非齐次泊松过程。所以该过程与其等价。</p>
+<p>得证</p>
+</div>
+<div id="section-16" class="section level1">
+<h1>8:</h1>
+<div id="section-17" class="section level2">
+<h2>(1):</h2>
+<p>由于强度<span class="math inline">\(\lambda(t)\)</span>是随时间变化而变化的,所以不同的<span class="math inline">\(T_1\)</span>会导致<span class="math inline">\(T_2\)</span>有不同的分布函数,<span class="math inline">\(T_i\)</span>不独立。</p>
+</div>
+<div id="section-18" class="section level2">
+<h2>(2):</h2>
+<p>由于强度<span class="math inline">\(\lambda(t)\)</span>是随时间变化而变化的，因此<span class="math inline">\(T_i\)</span>不是同分布的。</p>
+</div>
+<div id="section-19" class="section level2">
+<h2>(3):</h2>
+<p>对<span class="math inline">\(T_1\)</span>而言，<span class="math inline">\(P(T_1&gt;t)=P(N(t)=0)=e^{-m(t)}\)</span></p>
+<p>因此<span class="math inline">\(P(t)=(1-e^{-m(t)})&#39;=\lambda(t)e^{-m(t)},t\ge 0\)</span></p>
+</div>
+</div>
+<div id="section-20" class="section level1">
+<h1>9:</h1>
+<p>由定理2.4,N(t)服从参数为<span class="math inline">\(\lambda tp\)</span>的泊松分布。</p>
+<p><span class="math inline">\(E(N(\frac{1}{12}))=10000\cdot\frac{1}{12} \cdot 0.0001=\frac{1}{12}\)</span>,即为0.0833333</p>
+<p>同理方差也为:<span class="math inline">\(\frac{1}{12}\)</span>,即为0.0833333</p>
+</div>
+<div id="section-21" class="section level1">
+<h1>10:</h1>
+<p><span class="math display">\[\begin{equation}\begin{split}
+P\{X(t)=j|N(t)=n\}&amp;=P(\sum_{i=1}^ns_i=j|N(t)=n)\\
+&amp;=P(\sum_{i=1}^ns_i=j) (由独立性)\\
+&amp;=e^{-n\beta}\frac{(n\beta)^j}{j!}(由泊松分布可加性)
+\end{split}\end{equation}
+\]</span></p>
+<p><span class="math display">\[\begin{equation}\begin{split}
+E(X(t))&amp;=E(E\{X(t)=j|N(t)=n\})\\
+&amp;=E(E(\sum_{n=0}^{\infty}e^{-n\beta}\frac{(n\beta)^j}{j!})P(N(t)=n))\\
+&amp;=\sum_{n=0}^{\infty}n\beta \cdot e^{-\lambda}\frac{(\lambda)^n}{n!}\\
+&amp;=\beta\lambda[0+\sum_{n=1}^{\infty}e^{-\lambda}\frac{\lambda ^{n-1}}{(n-1)!}] \\
+&amp;=\lambda^2 \beta
+\end{split}\end{equation}\]</span></p>
+</div>
