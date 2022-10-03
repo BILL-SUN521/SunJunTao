@@ -1,17 +1,179 @@
----
-title: 随机过程作业2
-author: JunTao Sun
-date: '2022-09-30'
-slug: []
-categories:
-  - 随机过程
-tags:
-  - 作业
-draft: yes
-description: ~
-featured_image: ~
----
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  
+  
+  
+  
+  <link rel="prev" href="http://localhost:4321/2022/2022-09-29-first/" />
+  
+  <link rel="canonical" href="http://localhost:4321/2022/stohastic-process-hw2/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           随机过程作业2 | 孙骏涛
+       
+  </title>
+  <meta name="title" content="随机过程作业2 | 孙骏涛">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
 
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="随机过程作业2"/>
+<meta name="twitter:description" content="1:(1):由题意可以得到泊松过程的强度为\(\lambda\)=3
+\[\begin{equation}\begin{split}P(N(12)-N(8)=0)&amp;=e^{-\lambda t}\frac{(\lambda t)^{0}}{0!} \\&amp;=e^{-3\cdot(12-8)} \\&amp;=e^{-12} \\\end{split}\end{equation}\]
+所以在上午8点到12点期间，该天文台没有观察到流星的概率为\(e^{-12}\),即为：6.1442124^{-6}
+(2):记X为观测到第一颗流星的时间，那么由定理2.1，我们有：X服从参数为3的指数分布
+由此可以得到天文台观察到第一颗流星的时间的分布函数为： \[F(x)=\begin{cases}1-e^{-3x},x&gt;0 \\0 \quad \quad \quad ,else\end{cases}\]
+2:(1):由题意可以得到泊松过程的强度为\(\lambda\)=4
+由定理2.1，T服从一个参数为4的指数分布
+𝑇的概率密度函数；\[f(t)=\begin{cases}4e^{-4t},t&gt;0 \\0 \quad \quad ,else\end{cases}\]
+(2):\[\begin{equation}\begin{split}P(T \ge 1)&amp;=\int_{1}^{&#43;\infty} 4e^{-4t}dt \\&amp;=e^{-4 \cdot 1} \\&amp;=e^{-4}\end{split}\end{equation}\]
+所以\(P(T \ge 1)=e^{-4}\),即为：0.0183156
+3：(1):\[\begin{equation}\begin{split}P(N(2)-N(0)=3)&amp;=\frac{[\lambda \cdot (2-0)]^3}{3!}e^{-\lambda\cdot(2-0)} \\&amp;=\frac{4\lambda^4}{3}e^{-2\lambda}\end{split}\end{equation}\]
+(2):\[\begin{equation}\begin{split}P(N(2)-N(1) \ge 3)&amp;=1-P(N(2)-N(1)=0)-P(N(2)-N(1)=1)-P(N(2)-N(1)=2)\\&amp;=1-\frac{[\lambda \cdot (2-1)]^0}{0!"/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "随机过程作业2",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/localhost:4321\/2022\/stohastic-process-hw2\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/localhost:4321\/cover.png",
+    "width":  800 ,
+    "height":  600 
+  },
+  "genre": "posts",
+  "keywords": "作业",
+  "wordcount":  278 ,
+  "url": "http:\/\/localhost:4321\/2022\/stohastic-process-hw2\/",
+  "datePublished": "2022-09-30T00:00:00\u002b00:00",
+  "dateModified": "2022-09-30T00:00:00\u002b00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/localhost:4321\/logo.png",
+      "width":  127 ,
+      "height":  40 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "JunTao Sun"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="http://localhost:4321/">孙骏涛</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="http://localhost:4321/">孙骏涛</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">随机过程作业2</h1>
+        <div class="post-meta">
+            Written by <a href="http://localhost:4321/" rel="author">JunTao Sun</a> with ♥ 
+                <span class="post-time">
+                    on <time datetime=2022-09-30 >30 September 2022</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="http://localhost:4321/categories/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/"> 随机过程 </a>
+                        
+                </span>
+                <i class="iconfont icon-timer"></i>
+                2 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
 
 
 <div id="section" class="section level1">
@@ -211,3 +373,167 @@ E(X(t))&amp;=E(E\{X(t)=j|N(t)=n\})\\
 &amp;=\lambda^2 \beta
 \end{split}\end{equation}\]</span></p>
 </div>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Fastbyte01 </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>Words:</span>
+                   <span>278</span>
+            </p>
+
+            <p class="copyright-item">
+                
+                <span>Share:</span>
+                <span>
+
+      
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a4321%2f2022%2fstohastic-process-hw2%2f&amp;text=%e9%9a%8f%e6%9c%ba%e8%bf%87%e7%a8%8b%e4%bd%9c%e4%b8%9a2&amp;via=xxxx" target="_blank" title="Share on Twitter">
+          <i class="iconfont icon-twitter"></i>
+        </a>
+        
+      
+      
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a4321%2f2022%2fstohastic-process-hw2%2f" target="_blank" title="Share on Facebook">
+          <i class="iconfont icon-facebook"></i>
+        </a>
+        
+      
+      
+      
+      
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a4321%2f2022%2fstohastic-process-hw2%2f&amp;title=%e9%9a%8f%e6%9c%ba%e8%bf%87%e7%a8%8b%e4%bd%9c%e4%b8%9a2" target="_blank" title="Share on LinkedIn">
+          <i class="iconfont icon-linkedin"></i>
+        </a>
+        
+      
+      
+        
+      
+        
+      
+
+          
+
+          
+
+          
+
+          
+
+</span>
+                
+            </p>
+
+             
+            <p class="copyright-item">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-icon-tag"></i>Tag: 
+            
+            <span class="tag"><a href="http://localhost:4321/tags/%E4%BD%9C%E4%B8%9A/">
+                    #作业</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">Back</a></span> · 
+                <span><a href="http://localhost:4321/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="http://localhost:4321/2022/2022-09-29-first/" class="prev" rel="prev" title="第一篇博客"><i class="iconfont icon-dajiantou"></i>&nbsp;第一篇博客</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+          <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'yourdiscussshortname';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+ 
+
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2012 - 2022</span>
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="http://localhost:4321/">Fastbyte01</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+</script>
+
+<script src='https://cdn.jsdelivr.net/npm/mathjax@2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+     </div>
+  </body>
+</html>
