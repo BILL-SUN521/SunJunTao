@@ -7,7 +7,6 @@ categories:
   - 随机过程
 tags:
   - 作业
-draft: yes
 description: ~
 featured_image: ~
 ---
