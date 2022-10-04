@@ -103,12 +103,12 @@ P(N(2)-N(1) \ge 3)&amp;=1-P(N(2)-N(1)=0)-P(N(2)-N(1)=1)-P(N(2)-N(1)=2)\\
 <p>接着我们假设<span class="math inline">\(P(N(t)=n)=P_n(t)=e^{-m(t)}\frac{(m(t))^n}{n!}\)</span>,那么：</p>
 <p><span class="math display">\[
 \begin{equation}\begin{split}
-\frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&amp;=\frac{P(N(t+h)-N(t)=0)\cdot P_{n+1}(t)+P(N(t+h)-N(t)=1)\cdot P_{n}(t)\\
-+P(N(t+h)-N(t) \ge 2)\cdot P(N(t)&lt;n)-P_{n+1}(t)}{h} \\
-&amp;=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P_{n+1}(t)+(\lambda(t)\cdot h+o(h))\cdot P_{n}(t)+ \\
+\frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&amp;=\frac{P(N(t+h)-N(t)=0)\cdot P_{n+1}(t)+P(N(t+h)-N(t)=1)\\
+\cdot P_{n}(t)+P(N(t+h)-N(t) \ge 2)\cdot P(N(t)&lt;n)-P_{n+1}(t)}{h} \\
+&amp;=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P_{n+1}(t)+(\lambda(t)\cdot h+o(h))\\\cdot P_{n}(t)+
 o(h)\cdot P(N(t)&lt;n)-P_{n+1}(t)}{h} \\
 &amp;=\frac{(-\lambda(t)\cdot h-2o(h))P_{n+1}(t)+(\lambda(t)\cdot h+o(h))e^{-m(t)}\frac{(m(t))^n}{n!}+\\o(h)\cdot P(N(t)&lt;n)}{h} \\
-&amp;=\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!}+P(N(t)&lt;n]- \\ &amp;\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
+&amp;=\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!} +P(N(t)&lt;n]- \\ &amp;\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
 \end{split}\end{equation}
 \]</span></p>
 <p>当<span class="math inline">\(h \to 0\)</span>时，</p>

@@ -111,12 +111,12 @@ $P_0(t)=e^{-\int_0^t\lambda(s)ds}=e^{-m(t)}$
 
 $$
 \begin{equation}\begin{split}
-\frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&=\frac{P(N(t+h)-N(t)=0)\cdot P_{n+1}(t)+P(N(t+h)-N(t)=1)\cdot P_{n}(t)\\
-+P(N(t+h)-N(t) \ge 2)\cdot P(N(t)<n)-P_{n+1}(t)}{h} \\
-&=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P_{n+1}(t)+(\lambda(t)\cdot h+o(h))\cdot P_{n}(t)+ \\
+\frac{P(N(t+h)=n+1)-P(N(t)=n+1)}{h}&=\frac{P(N(t+h)-N(t)=0)\cdot P_{n+1}(t)+P(N(t+h)-N(t)=1)\\
+\cdot P_{n}(t)+P(N(t+h)-N(t) \ge 2)\cdot P(N(t)<n)-P_{n+1}(t)}{h} \\
+&=\frac{(1-\lambda(t)\cdot h-o(h)-o(h))\cdot P_{n+1}(t)+(\lambda(t)\cdot h+o(h))\\\cdot P_{n}(t)+ 
 o(h)\cdot P(N(t)<n)-P_{n+1}(t)}{h} \\
 &=\frac{(-\lambda(t)\cdot h-2o(h))P_{n+1}(t)+(\lambda(t)\cdot h+o(h))e^{-m(t)}\frac{(m(t))^n}{n!}+\\o(h)\cdot P(N(t)<n)}{h} \\
-&=\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!}+P(N(t)<n]- \\ &\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
+&=\frac{o(h)}{h}[P_{n+1}(t)+e^{-m(t)}\frac{(m(t))^n}{n!} +P(N(t)<n]- \\ &\quad \lambda(t)[P_{n+1}(t)-e^{-m(t)}\frac{(m(t))^n}{n!}]
 \end{split}\end{equation}
 $$
 
