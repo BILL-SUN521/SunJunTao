@@ -98,3 +98,8 @@ params:
   yandex_verification: ''
 author:
   name: Fastbyte01
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
