@@ -1,0 +1,141 @@
+---
+title: Data Analysis and Visualization - Assignment 1
+author: 孙骏涛 2020111521
+date: '2022-10-05'
+slug: []
+categories:
+  - 数据分析与可视化
+tags:
+  - 作业
+  - R
+description: ~
+featured_image: ~
+---
+
+## Due Date: In class on Thursday Oct 9th, 2022. 
+
+## Please print out your assignment in pages. DO NOT SEND ELECTRONIC COPIES TO MY EMAIL.
+
+## Notes:
+
+### 1. The first thing you need to do is change "Name" and "Student No." of this template. You can modify those in the 3rd line of this Rmd file (author:....). Use \textit{pinyin} in order of last name plus first name, instead of Mandarin character in case that there will be compling errors. For instance, use "Zhang Sansan, 20XXXXXXXX" to replace "Name, Student No.". 
+\bigskip
+
+
+### 2. All you have to do for this assignment is to write R codes in the chunks in this .Rmd file. You can find in each question the words "Please write your R code in this chunk". Just follow this instruction. 
+\bigskip
+
+### 3. For questions that require outputs of figures, such as boxplots, please just show them in the R chunk, instead of producing them in R firstly, export them out then insert the plot in Rmd. Just produce graphs in the R chunk in this Rmd file.
+\bigskip
+
+
+### 4. For questions that involve short answers, put them in "Your comments if needed:  " at the end of each question. PLEASE WRITE IN ENGLISH in case of any compiling error. Your language skill will not count for marks.
+\bigskip
+
+
+### 5. For questions that involve calculation, "PRINT" outputs in the R chunk. For example, if you are required to find the mean of a variable, then in the R chunk, use "mean(variable)" to show the output. Do not write them in words in "Your comments if needed.." section. You have to show that the result is calculated by your own R code rather than anywhere else. 
+\bigskip
+
+
+### 6. DO NOT CHANGE ANYTHING ELSE IN THIS RMD FILE EXCEPT FOR THE R CODE YOU WRITE, ESPECIALLY THE SETUP COMMAND FOR R CHUNKS. Otherwise your R output may not appear.
+\bigskip
+
+
+### 7. DO NOT COPY CODES FROM OTHERS. STRICT PUNISHMENT WILL FOLLOW IF FOUND.
+
+
+\newpage
+1. Write a R program to create a sequence of numbers from 20 to 50 and find the mean of numbers from 20 to 60 and sum of numbers from 51 to 91.
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q1
+sq=c(20:50)
+sq
+mean_of_numbers=mean(20:60)
+mean_of_numbers
+sum_of_numbers=sum(51:91)
+sum_of_numbers
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+
+2. Write a R program to get the first 10 Fibonacci numbers with initial two terms as $a_1=1$ and $a_2=1$. 
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q2
+#Fibonacci_numbers=rep(0,time=10)
+Fibonacci <- function(n)
+{ifelse(n>2,Fibonacci(n-1)+Fibonacci(n-2),1)}
+Fibonacci(1:13)
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+3. Write a R program to print the numbers from 1 to 100 and print "Fizz" for multiples of 3, print "Buzz" for multiples of 5, and print "FizzBuzz" for multiples of both.
+
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q3
+x=c(1:100)
+for (i in 1:100) {
+  if (x[i] %% 3 == 0 & x[i] %% 5 == 0) 
+  {print('FizzBuzz')}
+  else if (x[i] %% 3 == 0 ) 
+  {print('Buzz')}
+  else if (x[i] %% 3 == 0 ) 
+  {print('Fizz')}
+  else
+  {print(x[i])}
+}
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+4. Write a R program to create three vectors $a$, $b$ and $c$ with 3 arbitrary integers. Combine the three vectors to become a $3\times 3$ matrix $A$, where each column represents a vector. Print the content of the matrix $A$.
+
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q4
+options(digits=1)
+a=runif(3,min=-10,max=10)
+b=runif(3,min=-10,max=10)
+c=runif(3,min=-10,max=10)
+A=cbind(a,b,c)
+print(A)
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+5. Write a R program to find row and column index of maximum and minimum value in a given matrix. Check your code using the matrix $A$ below (do not change $A$).
+
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q5
+set.seed(123)
+A = matrix(rnorm(20,0,1), nrow=4, ncol=5, byrow=T)
+max_index=which(A == max(A), arr.ind = TRUE) 
+min_index=which(A == min(A), arr.ind = TRUE) 
+max_index
+min_index
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+6. Generate a sample of size $n=100$ from $(\textbf{X}, Y)$, using a linear model $Y= \bf{X}\boldsymbol{\beta} + 0.1\times \varepsilon$, where $\boldsymbol{\beta} = (1,2,3)^\top$ and $X_1, X_2, X_3$ and $\varepsilon\sim N(0,1)$ independently.
+
+(a) Use OLS to find the estimated $\beta$ based on the generated sample.
+(b) Find the residual vector using $Y - \hat{Y}$, where $\hat{Y} = \boldsymbol{X}\hat{\beta}$, and report the mean squared error (MSE).
+```{r, include=T, echo=T}
+######### Please write your R code in this chunk #########
+### Solution to Q6
+e=rnorm(100,0,1)
+beta=c(1,2,3)
+x=matrix(rnorm(300,0,1), nrow=100, ncol=3, byrow=T)
+y= x %*% beta + e
+# (a)
+options(digits=2)
+estimated_beta=solve(t(x) %*% x) %*% t(x) %*% y
+estimated_beta                
+# (b)
+residual=y-x %*% estimated_beta
+MSE=sum(residual^2)/100
+residual
+MSE
+```
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip

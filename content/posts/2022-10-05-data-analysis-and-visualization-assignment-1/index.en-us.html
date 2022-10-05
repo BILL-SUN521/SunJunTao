@@ -1,0 +1,349 @@
+---
+title: Data Analysis and Visualization - Assignment 1
+author: 孙骏涛 2020111521
+date: '2022-10-05'
+slug: []
+categories:
+  - 数据分析与可视化
+tags:
+  - 作业
+  - R
+description: ~
+featured_image: ~
+---
+
+
+
+<div id="due-date-in-class-on-thursday-oct-9th-2022." class="section level2">
+<h2>Due Date: In class on Thursday Oct 9th, 2022.</h2>
+</div>
+<div id="please-print-out-your-assignment-in-pages.-do-not-send-electronic-copies-to-my-email." class="section level2">
+<h2>Please print out your assignment in pages. DO NOT SEND ELECTRONIC COPIES TO MY EMAIL.</h2>
+</div>
+<div id="notes" class="section level2">
+<h2>Notes:</h2>
+<div id="the-first-thing-you-need-to-do-is-change-name-and-student-no.-of-this-template.-you-can-modify-those-in-the-3rd-line-of-this-rmd-file-author..-use-in-order-of-last-name-plus-first-name-instead-of-mandarin-character-in-case-that-there-will-be-compling-errors.-for-instance-use-zhang-sansan-20xxxxxxxx-to-replace-name-student-no.." class="section level3">
+<h3>1. The first thing you need to do is change “Name” and “Student No.” of this template. You can modify those in the 3rd line of this Rmd file (author:….). Use in order of last name plus first name, instead of Mandarin character in case that there will be compling errors. For instance, use “Zhang Sansan, 20XXXXXXXX” to replace “Name, Student No.”.</h3>
+
+</div>
+<div id="all-you-have-to-do-for-this-assignment-is-to-write-r-codes-in-the-chunks-in-this-.rmd-file.-you-can-find-in-each-question-the-words-please-write-your-r-code-in-this-chunk.-just-follow-this-instruction." class="section level3">
+<h3>2. All you have to do for this assignment is to write R codes in the chunks in this .Rmd file. You can find in each question the words “Please write your R code in this chunk”. Just follow this instruction.</h3>
+
+</div>
+<div id="for-questions-that-require-outputs-of-figures-such-as-boxplots-please-just-show-them-in-the-r-chunk-instead-of-producing-them-in-r-firstly-export-them-out-then-insert-the-plot-in-rmd.-just-produce-graphs-in-the-r-chunk-in-this-rmd-file." class="section level3">
+<h3>3. For questions that require outputs of figures, such as boxplots, please just show them in the R chunk, instead of producing them in R firstly, export them out then insert the plot in Rmd. Just produce graphs in the R chunk in this Rmd file.</h3>
+
+</div>
+<div id="for-questions-that-involve-short-answers-put-them-in-your-comments-if-needed-at-the-end-of-each-question.-please-write-in-english-in-case-of-any-compiling-error.-your-language-skill-will-not-count-for-marks." class="section level3">
+<h3>4. For questions that involve short answers, put them in “Your comments if needed:” at the end of each question. PLEASE WRITE IN ENGLISH in case of any compiling error. Your language skill will not count for marks.</h3>
+
+</div>
+<div id="for-questions-that-involve-calculation-print-outputs-in-the-r-chunk.-for-example-if-you-are-required-to-find-the-mean-of-a-variable-then-in-the-r-chunk-use-meanvariable-to-show-the-output.-do-not-write-them-in-words-in-your-comments-if-needed..-section.-you-have-to-show-that-the-result-is-calculated-by-your-own-r-code-rather-than-anywhere-else." class="section level3">
+<h3>5. For questions that involve calculation, “PRINT” outputs in the R chunk. For example, if you are required to find the mean of a variable, then in the R chunk, use “mean(variable)” to show the output. Do not write them in words in “Your comments if needed..” section. You have to show that the result is calculated by your own R code rather than anywhere else.</h3>
+
+</div>
+<div id="do-not-change-anything-else-in-this-rmd-file-except-for-the-r-code-you-write-especially-the-setup-command-for-r-chunks.-otherwise-your-r-output-may-not-appear." class="section level3">
+<h3>6. DO NOT CHANGE ANYTHING ELSE IN THIS RMD FILE EXCEPT FOR THE R CODE YOU WRITE, ESPECIALLY THE SETUP COMMAND FOR R CHUNKS. Otherwise your R output may not appear.</h3>
+
+</div>
+<div id="do-not-copy-codes-from-others.-strict-punishment-will-follow-if-found." class="section level3">
+<h3>7. DO NOT COPY CODES FROM OTHERS. STRICT PUNISHMENT WILL FOLLOW IF FOUND.</h3>
+<p>. Write a R program to create a sequence of numbers from 20 to 50 and find the mean of numbers from 20 to 60 and sum of numbers from 51 to 91.</p>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q1
+sq=c(20:50)
+sq</code></pre>
+<pre><code>##  [1] 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44
+## [26] 45 46 47 48 49 50</code></pre>
+<pre class="r"><code>mean_of_numbers=mean(20:60)
+mean_of_numbers</code></pre>
+<pre><code>## [1] 40</code></pre>
+<pre class="r"><code>sum_of_numbers=sum(51:91)
+sum_of_numbers</code></pre>
+<pre><code>## [1] 2911</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Write a R program to get the first 10 Fibonacci numbers with initial two terms as <span class="math inline">\(a_1=1\)</span> and <span class="math inline">\(a_2=1\)</span>.</li>
+</ol>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q2
+#Fibonacci_numbers=rep(0,time=10)
+Fibonacci &lt;- function(n)
+{ifelse(n&gt;2,Fibonacci(n-1)+Fibonacci(n-2),1)}
+Fibonacci(1:13)</code></pre>
+<pre><code>##  [1]   1   1   2   3   5   8  13  21  34  55  89 144 233</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Write a R program to print the numbers from 1 to 100 and print “Fizz” for multiples of 3, print “Buzz” for multiples of 5, and print “FizzBuzz” for multiples of both.</li>
+</ol>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q3
+x=c(1:100)
+for (i in 1:100) {
+  if (x[i] %% 3 == 0 &amp; x[i] %% 5 == 0) 
+  {print(&#39;FizzBuzz&#39;)}
+  else if (x[i] %% 3 == 0 ) 
+  {print(&#39;Buzz&#39;)}
+  else if (x[i] %% 3 == 0 ) 
+  {print(&#39;Fizz&#39;)}
+  else
+  {print(x[i])}
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] &quot;Buzz&quot;
+## [1] 4
+## [1] 5
+## [1] &quot;Buzz&quot;
+## [1] 7
+## [1] 8
+## [1] &quot;Buzz&quot;
+## [1] 10
+## [1] 11
+## [1] &quot;Buzz&quot;
+## [1] 13
+## [1] 14
+## [1] &quot;FizzBuzz&quot;
+## [1] 16
+## [1] 17
+## [1] &quot;Buzz&quot;
+## [1] 19
+## [1] 20
+## [1] &quot;Buzz&quot;
+## [1] 22
+## [1] 23
+## [1] &quot;Buzz&quot;
+## [1] 25
+## [1] 26
+## [1] &quot;Buzz&quot;
+## [1] 28
+## [1] 29
+## [1] &quot;FizzBuzz&quot;
+## [1] 31
+## [1] 32
+## [1] &quot;Buzz&quot;
+## [1] 34
+## [1] 35
+## [1] &quot;Buzz&quot;
+## [1] 37
+## [1] 38
+## [1] &quot;Buzz&quot;
+## [1] 40
+## [1] 41
+## [1] &quot;Buzz&quot;
+## [1] 43
+## [1] 44
+## [1] &quot;FizzBuzz&quot;
+## [1] 46
+## [1] 47
+## [1] &quot;Buzz&quot;
+## [1] 49
+## [1] 50
+## [1] &quot;Buzz&quot;
+## [1] 52
+## [1] 53
+## [1] &quot;Buzz&quot;
+## [1] 55
+## [1] 56
+## [1] &quot;Buzz&quot;
+## [1] 58
+## [1] 59
+## [1] &quot;FizzBuzz&quot;
+## [1] 61
+## [1] 62
+## [1] &quot;Buzz&quot;
+## [1] 64
+## [1] 65
+## [1] &quot;Buzz&quot;
+## [1] 67
+## [1] 68
+## [1] &quot;Buzz&quot;
+## [1] 70
+## [1] 71
+## [1] &quot;Buzz&quot;
+## [1] 73
+## [1] 74
+## [1] &quot;FizzBuzz&quot;
+## [1] 76
+## [1] 77
+## [1] &quot;Buzz&quot;
+## [1] 79
+## [1] 80
+## [1] &quot;Buzz&quot;
+## [1] 82
+## [1] 83
+## [1] &quot;Buzz&quot;
+## [1] 85
+## [1] 86
+## [1] &quot;Buzz&quot;
+## [1] 88
+## [1] 89
+## [1] &quot;FizzBuzz&quot;
+## [1] 91
+## [1] 92
+## [1] &quot;Buzz&quot;
+## [1] 94
+## [1] 95
+## [1] &quot;Buzz&quot;
+## [1] 97
+## [1] 98
+## [1] &quot;Buzz&quot;
+## [1] 100</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Write a R program to create three vectors <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> with 3 arbitrary integers. Combine the three vectors to become a <span class="math inline">\(3\times 3\)</span> matrix <span class="math inline">\(A\)</span>, where each column represents a vector. Print the content of the matrix <span class="math inline">\(A\)</span>.</li>
+</ol>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q4
+options(digits=1)
+a=runif(3,min=-10,max=10)
+b=runif(3,min=-10,max=10)
+c=runif(3,min=-10,max=10)
+A=cbind(a,b,c)
+print(A)</code></pre>
+<pre><code>##       a   b    c
+## [1,] -5  -9  9.0
+## [2,] -9 -10 -0.6
+## [3,]  2   3  7.2</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Write a R program to find row and column index of maximum and minimum value in a given matrix. Check your code using the matrix <span class="math inline">\(A\)</span> below (do not change <span class="math inline">\(A\)</span>).</li>
+</ol>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q5
+set.seed(123)
+A = matrix(rnorm(20,0,1), nrow=4, ncol=5, byrow=T)
+max_index=which(A == max(A), arr.ind = TRUE) 
+min_index=which(A == min(A), arr.ind = TRUE) 
+max_index</code></pre>
+<pre><code>##      row col
+## [1,]   4   1</code></pre>
+<pre class="r"><code>min_index</code></pre>
+<pre><code>##      row col
+## [1,]   4   3</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Generate a sample of size <span class="math inline">\(n=100\)</span> from <span class="math inline">\((\textbf{X}, Y)\)</span>, using a linear model <span class="math inline">\(Y= \bf{X}\boldsymbol{\beta} + 0.1\times \varepsilon\)</span>, where <span class="math inline">\(\boldsymbol{\beta} = (1,2,3)^\top\)</span> and <span class="math inline">\(X_1, X_2, X_3\)</span> and <span class="math inline">\(\varepsilon\sim N(0,1)\)</span> independently.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Use OLS to find the estimated <span class="math inline">\(\beta\)</span> based on the generated sample.</li>
+<li>Find the residual vector using <span class="math inline">\(Y - \hat{Y}\)</span>, where <span class="math inline">\(\hat{Y} = \boldsymbol{X}\hat{\beta}\)</span>, and report the mean squared error (MSE).</li>
+</ol>
+<pre class="r"><code>######### Please write your R code in this chunk #########
+### Solution to Q6
+e=rnorm(100,0,1)
+beta=c(1,2,3)
+x=matrix(rnorm(300,0,1), nrow=100, ncol=3, byrow=T)
+y= x %*% beta + e
+# (a)
+options(digits=2)
+estimated_beta=solve(t(x) %*% x) %*% t(x) %*% y
+estimated_beta                </code></pre>
+<pre><code>##      [,1]
+## [1,]  1.0
+## [2,]  2.1
+## [3,]  3.0</code></pre>
+<pre class="r"><code># (b)
+residual=y-x %*% estimated_beta
+MSE=sum(residual^2)/100
+residual</code></pre>
+<pre><code>##          [,1]
+##   [1,] -1.004
+##   [2,] -0.331
+##   [3,] -1.023
+##   [4,] -0.824
+##   [5,] -0.583
+##   [6,] -1.597
+##   [7,]  0.928
+##   [8,]  0.264
+##   [9,] -1.097
+##  [10,]  1.131
+##  [11,]  0.377
+##  [12,] -0.287
+##  [13,]  0.913
+##  [14,]  0.818
+##  [15,]  0.617
+##  [16,]  0.652
+##  [17,]  0.533
+##  [18,] -0.075
+##  [19,] -0.238
+##  [20,] -0.404
+##  [21,] -0.774
+##  [22,] -0.193
+##  [23,] -1.274
+##  [24,]  2.157
+##  [25,]  1.275
+##  [26,] -1.148
+##  [27,] -0.345
+##  [28,] -0.451
+##  [29,]  0.815
+##  [30,] -0.189
+##  [31,]  0.229
+##  [32,]  0.021
+##  [33,]  0.011
+##  [34,]  1.398
+##  [35,] -0.266
+##  [36,]  1.567
+##  [37,] -1.497
+##  [38,]  0.576
+##  [39,]  0.208
+##  [40,]  0.202
+##  [41,]  0.399
+##  [42,] -0.507
+##  [43,] -0.242
+##  [44,] -0.990
+##  [45,] -1.090
+##  [46,]  0.230
+##  [47,]  0.549
+##  [48,]  0.040
+##  [49,]  0.829
+##  [50,]  2.071
+##  [51,] -0.556
+##  [52,] -2.362
+##  [53,]  0.998
+##  [54,] -0.609
+##  [55,] -0.671
+##  [56,]  1.000
+##  [57,] -0.304
+##  [58,] -1.287
+##  [59,]  0.167
+##  [60,] -0.152
+##  [61,]  0.059
+##  [62,]  0.409
+##  [63,] -0.397
+##  [64,]  0.560
+##  [65,] -0.183
+##  [66,]  0.349
+##  [67,]  1.040
+##  [68,]  0.518
+##  [69,] -0.370
+##  [70,]  1.065
+##  [71,]  1.076
+##  [72,]  0.542
+##  [73,]  0.243
+##  [74,] -0.675
+##  [75,]  1.361
+##  [76,] -0.606
+##  [77,]  2.190
+##  [78,]  1.555
+##  [79,] -0.262
+##  [80,] -0.889
+##  [81,] -0.754
+##  [82,]  0.208
+##  [83,] -0.192
+##  [84,] -0.490
+##  [85,] -1.009
+##  [86,]  0.016
+##  [87,] -0.672
+##  [88,] -1.671
+##  [89,] -0.470
+##  [90,]  0.942
+##  [91,] -0.446
+##  [92,]  0.632
+##  [93,] -1.664
+##  [94,] -0.043
+##  [95,]  0.515
+##  [96,]  0.315
+##  [97,]  0.087
+##  [98,] -0.681
+##  [99,] -0.682
+## [100,] -1.053</code></pre>
+<pre class="r"><code>MSE</code></pre>
+<pre><code>## [1] 0.76</code></pre>
+</div>
+</div>
