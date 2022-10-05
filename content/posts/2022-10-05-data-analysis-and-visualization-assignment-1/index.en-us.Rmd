@@ -45,6 +45,7 @@ featured_image: ~
 
 
 \newpage
+
 1. Write a R program to create a sequence of numbers from 20 to 50 and find the mean of numbers from 20 to 60 and sum of numbers from 51 to 91.
 ```{r, include=T, echo=T}
 ######### Please write your R code in this chunk #########
